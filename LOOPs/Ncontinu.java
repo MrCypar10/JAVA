@@ -10,10 +10,11 @@ class Ncontinu {
             if (n==0) 
                 break;
             
-            if (n>0) {
+            if (n<0) {
                 continue;
             }    
                 sum = sum+n;
+                
             
         System.out.println("Sum is :"+sum);
         }
