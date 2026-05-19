@@ -1,8 +1,8 @@
 
 import java.util.*;
-package ARRAYs;
 
-class sum&avg{
+    public class sum_N_avg{
+    
     
     public static void main(String[] args) {
      int sum = 0;
