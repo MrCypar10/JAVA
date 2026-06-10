@@ -1,7 +1,7 @@
 //ENTITY CLASS
 
 //========================
-public class Circle {
+public class Return_Circle {
 
     private int radius;
 
@@ -9,13 +9,13 @@ public class Circle {
         radius = r;
     }
 
-    public void calculateArea() {
+    public double calculateArea() {
         double area = Math.PI * Math.pow(radius, 2);
-        System.out.println("Area iof Circle is :" + area);
+        return area;
     }
 
-    public void calculateCircum() {
+    public double calculateCircum() {
         double circum = 2 * Math.PI * radius;
-        System.out.println("Circumference of Circle is :" + circum);
+        return circum;
     }
 }
