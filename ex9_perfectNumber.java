@@ -8,19 +8,17 @@ class ex9_perfectNumber {
         System.out.println("Enter the Number :");
         int n = sc.nextInt();
 
-        int org = n;
         int sum = 0;
-        while (n > 0) {
-            int k = org % 10;
-            if (org % k == 0) {
-                sum += k;
+        for(int i = n-1; i>=1; i--){
+            if(n%i==0){
+                sum+=i;
             }
-            n = n / 10;
+
         }
-        if (sum == org) {
-            System.out.println(org + " is a Perfect Number :");
+        if (sum == n) {
+            System.out.println(n + " is a Perfect Number :");
         } else {
-            System.out.println(org + " is not a Perfect Number :");
+            System.out.println(n + " is not a Perfect Number :");
         }
 
     }

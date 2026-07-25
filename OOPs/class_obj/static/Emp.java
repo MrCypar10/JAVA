@@ -3,11 +3,11 @@
     private int id;
     private String name;
     private double sal;
-    private static nextId; 
+    private static int nextId=1; 
 
-    public Emp (string name, double sal){
-        this.name = name;
-        this.sal = sal;
+    public Emp (String n, double s){
+        name = n;
+        sal = s;
         id = nextId++;
     }
 
