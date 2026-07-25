@@ -6,15 +6,17 @@ public class PrimeNumber{
         System.out.println("Enter the Number :");
         int count= 0;
         int n = sc.nextInt();
+        
+
         for(int i = 1; i<=n; i++){
             if (n%i==0) {
                 count++;
-            }
-            //if(n%i==0){break;}
+        
+        }
+            
             
         }
 
-        //if(i==n){"prime number"} else {Not a prime number}
         if (count==2) {
             System.out.println(n+" : is a Prime Number");
         }
@@ -23,3 +25,10 @@ public class PrimeNumber{
         }
     }
 }
+
+//int i;
+//for(i=1;i<=n;i++){
+//if(n%i==0)
+// {break;}
+//}
+//if(i==n){"prime number"} else {Not a prime number}
