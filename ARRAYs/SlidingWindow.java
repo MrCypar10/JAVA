@@ -1,6 +1,6 @@
 import java.util.*;
 
-    public class slidingWindow {
+    public class SlidingWindow {
         static int  maxsum(int arr[],int k){
             int curr =0;
             for (int i = 0; i<k;i++)
