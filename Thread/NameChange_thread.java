@@ -3,7 +3,7 @@ public class NameChange_thread {
         Thread th = Thread.currentThread();
         System.out.println("Before Thread Name Changed. (Default) : "+th );
 
-        th.setName("Cypar");
+        th.setName("Cypar"); // Setting Thread Name.
         System.out.println("After Thread Name Changed. : "+th );
         
         try {
