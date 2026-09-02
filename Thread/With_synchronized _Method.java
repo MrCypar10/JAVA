@@ -1,9 +1,9 @@
-//"Using Shared Data in 2 Threads without Synchornized Keyword"
+//"Using Shared Data in 2 Threads with Synchornized Keyword"
 
 
-class  BankAccount{
+class  BankAccount1{
     private int balance = 10000;
-    public void withdraw (int amount){
+    public synchronized void withdraw (int amount){
         System.out.println(Thread.currentThread().getName()+" is trying to withdraw Rs : "+amount);
         if(balance>=amount){
             System.out.println("Transaction Continuing.... Thread Sleeping.");
@@ -21,11 +21,13 @@ class  BankAccount{
     }
     }
 }
-class withdrawThread extends Thread{
-    private BankAccount account;
+
+
+class withdrawThread1 extends Thread{
+    private BankAccount1 account;
     private int amount;
 
-    public withdrawThread(BankAccount account,int amount){
+    public withdrawThread1(BankAccount1 account,int amount){
         this.account = account;
         this.amount = amount;
     }
@@ -34,11 +36,13 @@ class withdrawThread extends Thread{
     }
 }
 
-class Without_Synchronized_Method{
+
+
+class With_synchronized_Method{
     public static void main(String[] args) {
-        BankAccount obj  = new BankAccount();
-        withdrawThread t1 = new withdrawThread(obj, 7000);
-        withdrawThread t2 = new withdrawThread(obj, 5000);
+        BankAccount1 obj  = new BankAccount1();
+        withdrawThread1 t1 = new withdrawThread1(obj, 7000);
+        withdrawThread1 t2 = new withdrawThread1(obj, 5000);
         
         t1.start();
         t2.start();
@@ -54,14 +58,3 @@ class Without_Synchronized_Method{
     }
 }
 
-/*
-      OUTPUT
-============================
-Thread-0 is trying to withdraw Rs : 7000
-Thread-1 is trying to withdraw Rs : 5000
-Transaction Continuing.... Thread Sleeping.
-Transaction Continuing.... Thread Sleeping.
-Remaining Balance : 5000
-Remaining Balance : -2000 
-
-*/
